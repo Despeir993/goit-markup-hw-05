@@ -108,6 +108,8 @@ img {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link.current {
   color: var(--accent-color);
@@ -140,12 +142,16 @@ img {
 .cont-nav .cont:hover,
 .cont-nav .cont:focus {
   color: var(--accent-color);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cont:hover .icon-mail,
 .cont:focus .icon-mail,
 .cont:hover .icon-phone,
 .cont:focus .icon-phone {
   fill: var(--accent-color);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-mail {
   width: 16px;
@@ -194,6 +200,8 @@ img {
 
 .button:hover {
   background-color: var(--btn-hover);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-main .button {
@@ -363,11 +371,15 @@ img {
 .link-team:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-team:hover .item-socteam,
 .link-team:focus .item-socteam {
   fill: var(--spec-color);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-socteam {
@@ -408,6 +420,8 @@ img {
 .link-client:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo .footer {
@@ -441,6 +455,8 @@ img {
 .list .info:hover,
 .list .info:focus {
   color: var(--accent-color);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info {
@@ -496,6 +512,8 @@ img {
 .link-snfoot:hover,
 .link-snfoot:focus {
   background-color: var(--accent-color);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-net .item-social:not(:last-child) {
@@ -534,6 +552,8 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* list project */
@@ -574,6 +594,8 @@ img {
 .link-li:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list .titles {
@@ -590,3 +612,69 @@ img {
   line-height: 1.9;
   color: var(--title-text-color);
 }
+.hero .btn {
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-wrapper {
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+  left: 50%;
+  top: 50%;
+  background: var(--spec-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+}
+.modal-btn {
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  right: 8px;
+  top: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.link {
+  position: relative;
+}
+.link::after {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 2px;
+  top: 76px;
+  content: ' ';
+  background: #2196f3;
+  border-radius: 2px;
+  display: none;
+}
+.link:hover::after {
+  display: block;
+}
+
+.current {
+}
+
+/*  ========================== */
