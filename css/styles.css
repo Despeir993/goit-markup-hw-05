@@ -227,6 +227,9 @@ img {
   margin-right: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/Fon.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .visually-hidden {
@@ -614,6 +617,7 @@ img {
 }
 .hero .btn {
 }
+/* Модальное окно*/
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -656,25 +660,86 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
+/* Бордер для активной страницы*/
 .link {
   position: relative;
 }
-.link::after {
+
+.site-nav .link.current::after {
   position: absolute;
   width: 100%;
   height: 4px;
-  left: 2px;
-  top: 76px;
+  left: 0px;
+  bottom: 0;
   content: ' ';
   background: #2196f3;
   border-radius: 2px;
-  display: none;
+  opacity: 1;
 }
-.link:hover::after {
+/*Всплывающее окно портфолио*/
+.overlay-text {
+  width: 322px;
+  height: 168px;
+  color: var(--spec-color);
+  top: 0;
+  right: 0;
+}
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-portfolio {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-thumb:hover .overlay-portfolio {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Текст на картинках */
+.item {
+  position: relative;
+}
+.gallery .item::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: ' ';
   display: block;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  bottom: 0;
 }
 
-.current {
-}
+.gallery-text {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 28px;
 
-/*  ========================== */
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--spec-color);
+}
