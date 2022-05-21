@@ -103,13 +103,12 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link.current {
   color: var(--accent-color);
@@ -135,6 +134,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*  */
@@ -142,22 +142,19 @@ img {
 .cont-nav .cont:hover,
 .cont-nav .cont:focus {
   color: var(--accent-color);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cont:hover .icon-mail,
 .cont:focus .icon-mail,
 .cont:hover .icon-phone,
 .cont:focus .icon-phone {
   fill: var(--accent-color);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-mail {
   width: 16px;
   height: 12px;
   margin-right: 10px;
   fill: var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-phone {
@@ -165,6 +162,7 @@ img {
   height: 16px;
   margin-right: 10px;
   fill: var(--title-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .brd {
@@ -196,12 +194,11 @@ img {
   background-color: var(--accent-color);
   color: var(--spec-color);
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
   background-color: var(--btn-hover);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-main .button {
@@ -369,26 +366,24 @@ img {
   align-items: center;
   justify-content: center;
 }
-
+.link-team {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+}
 .link-team:hover,
 .link-team:focus {
   background-color: var(--accent-color);
-  border-radius: 50%;
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .link-team:hover .item-socteam,
 .link-team:focus .item-socteam {
   fill: var(--spec-color);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-socteam {
   width: 20px;
   height: 20px;
   fill: var(--border);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-socnet:not(:last-child) {
@@ -413,18 +408,19 @@ img {
 .itemclients {
   width: 106px;
   height: 60px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-client {
   fill: var(--border);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-client:hover,
 .link-client:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo .footer {
@@ -453,13 +449,12 @@ img {
 }
 .list .info {
   color: var(--color-footer);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list .info:hover,
 .list .info:focus {
   color: var(--accent-color);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info {
@@ -504,6 +499,7 @@ img {
   justify-content: center;
   border-radius: 50%;
   background-color: var(--color-social-network-bg);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-soc-foot {
@@ -515,8 +511,6 @@ img {
 .link-snfoot:hover,
 .link-snfoot:focus {
   background-color: var(--accent-color);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-net .item-social:not(:last-child) {
@@ -529,7 +523,7 @@ img {
   margin-bottom: 56px;
 }
 
-.filter .button {
+.filter .button-portfolio {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -537,26 +531,26 @@ img {
   text-align: center;
   background-color: var(--bg-color-button);
   color: var(--primary-text-color);
-
   border: 0;
   padding: 6px 22px;
   border-radius: 4px;
   min-width: 73px;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Кнопки в портфоліо */
 .filter .btn-item:not(:last-child) {
   margin-right: 8px;
 }
-
-.filter .button:hover,
-.filter .button:focus {
+.filter .button-portfolio:hover,
+.filter .button-portfolio:focus {
   color: var(--spec-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* list project */
@@ -591,14 +585,13 @@ img {
 
 .link-li {
   display: inline-block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-li:hover,
 .link-li:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list .titles {
@@ -620,7 +613,6 @@ img {
 /* Модальное окно*/
 .backdrop.is-hidden {
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
 }
 .backdrop {
@@ -630,8 +622,9 @@ img {
   left: 0px;
   top: 0px;
   background: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visbility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-wrapper {
@@ -699,13 +692,13 @@ img {
   align-items: center;
   justify-content: center;
   background: rgba(33, 150, 243, 0.9);
-  opacity: 0;
+
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-thumb:hover .overlay-portfolio {
-  opacity: 1;
+.project-item:hover .overlay-portfolio,
+.project-item:focus .overlay-portfolio {
   transform: translateY(0);
 }
 
@@ -723,7 +716,7 @@ img {
   height: 70px;
   background: rgba(47, 48, 58, 0.8);
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
 }
 
 .gallery-text {
@@ -732,12 +725,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 28px;
+  bottom: 27px;
   left: 0;
 
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
